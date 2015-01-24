@@ -23,7 +23,7 @@
   ## is only re-used if new matrix needs caching
  ## cacheSolve 
   ## all testing using this function
-  ## needs to check if matrix has changed so will need to use
+  ## needs to check if matrix has changed so will need to use identical()
   ## runs new solve or returns cache
 
   

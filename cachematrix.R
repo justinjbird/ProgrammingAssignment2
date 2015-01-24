@@ -4,18 +4,18 @@
 ## Dear assessor, welcome to my assignment :)
 ## Before you assess, I wanted to explain my interpretation of the assignment.  In the interests of 
 ## keeping this simple, I started with my own code and didn't take the example code and mess with it.
-## So my code simply picks up the matrix passed in by 'x', caches it in 'm' and caches the inverse to 'ms'
+## So my code simply picks up the matrix passed in by 'x', caches it in 'm' and caches the inverse to 'ms'.
 ## The second function then does a comparison of the new 'x' to 'm' then either returns ms or solve('x').
 ## I've also kept all my workings and notes...
 
 ## Code to use for testing
  ## mydata <- c(44.412, 0.238, -0.027, 93.128, 0.238, 0.427, -0.193, 0.673, 0.027, -0.033, 0.084, -0.764, 68.123, 0.468, -0.764, 205.144) ## Initial data
- ## mymatrix <- matrix(mydata, ncol = 4 ) ## Set as matrix
- ## myinversematrix <- solve(mymatrix) ## control results
- ## makeCacheMatrix(mymatrix) ## Sets up cached matrix
- ## identical(myinversematrix,ms) ## Proves that cached matrix is identical to control results by returning TRUE
- ## cacheSolve(mymatrix) ## Same matrix supplied
- ## cacheSolve(myinversematrix) ## Different matrix supplied
+ ## x <- matrix(mydata, ncol = 4 ) ## Set as matrix
+ ## ix <- solve(mymatrix) ## control results
+ ## makeCacheMatrix(x) ## Sets up cached matrix
+ ## identical(ix,ms) ## Proves that cached matrix is identical to control results by returning TRUE
+ ## cacheSolve(x) ## Same matrix supplied
+ ## cacheSolve(ix) ## Different matrix supplied
 
 ## My own notes for working out solution
  ## makeCacheMatrix
@@ -40,7 +40,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 		if (identical (x,m)) # does matrix 'x' match 'm'
-			{ ms } # if so return the cached inversed matrix of 'ms'
+			{ ms } # if so return the cached inverse matrix of 'ms'
 		else 
-			{ solve(x) } # otherwise calculate inversed matrix of 'x'
+			{ solve(x) } # otherwise calculate inverse matrix of 'x'
 		}
